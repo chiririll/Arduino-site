@@ -1,0 +1,20 @@
+details {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: default;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px
+}
+
+summary {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(top, var(--HmenuColor) 50%, var(--HmenuColorHover) 50%);
+    font-weight: bold;
+    font-size: 18pt;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}

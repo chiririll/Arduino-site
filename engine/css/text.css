@@ -1,0 +1,29 @@
+p {
+    text-indent: 20px;
+    padding: 5px;
+    font-size: 14pt;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+	text-align: center;
+}
+
+ul {
+    font-size: 14pt;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+td.text {
+    width: 70%;
+}
+
+h1.title {
+	color: white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 48pt;
+}
+
+A:visited {text-decoration: none;}

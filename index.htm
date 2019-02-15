@@ -1,0 +1,490 @@
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="msapplication-TileColor" content="#002a92">
+	<meta name="theme-color" content="#002a92">
+	<link rel="shortcut icon" href="engine/img/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="engine/css/style.css">
+
+	<script type="text/javascript" src="engine/scripts/data.js"></script>
+	<script type="text/javascript" src="engine/scripts/eventHandler.js"></script>
+	<script type="text/javascript" src="engine/scripts/top-btn.js"></script>
+	<script type="text/javascript" src="engine/scripts/fixator.js"></script>
+	<script type="text/javascript" src="engine/scripts/page.js"></script>
+	
+	<title>Главнвя - Arduino</title>
+</head>
+
+<body onresize="onResize()">
+	<header>
+		<h1 class="title">Arduino</h1>
+	</header>
+	
+	<nav class="hMenu" id="hMenu">
+		<ul class="hMenu">
+			<li class="hMenu"><a href="?main" class="hMenu">Главная</a></li>
+			<li class="hMenu"><a class="hMenu">Изучение</a>
+				<ul class="hMenu">
+					<li class="hMenu"><a href="?arduinolessons" class="hMenu">Уроки arduino</a></li>
+					<li class="hMenu"><a href="?electronics" class="hMenu">Уроки радиоэлектроники</a></li>
+				</ul>
+			</li>
+			<li class="hMenu"><a href="?projects" class="hMenu">Проекты</a></li>  
+			<li class="hMenu"><a href="?modules" class="hMenu">Модули</a></li>
+			<li class="hMenu"><a href="?other" class="hMenu">Другие платформы</a></li>
+		</ul>
+	</nav>
+
+	<div id="container">
+		<div id="content">
+			
+			<h1 id="page"></h1>
+
+			<div id="main" class="page">
+				<p>Добро пожаловать на сайт про платформу Arduino! Здесь вы сможете найти видеоуроки, простые и интересные проекты, 
+					различные модули и датчики, и много чего еще.</p>
+				<p>Arduino — это открытая платформа, которая позволяет собирать всевозможные электронные устройства. Arduino будет интересена 
+					креативщикам, дизайнерам, программистам и всем пытливым умам, желающим собрать собственный девайс. Устройства могут работать 
+					как автономно, так и в связке с компьютером. Всё зависит от идеи.</p>
+				<div class="center"><img class="board" src="engine/img/pages/main/000.jpg" alt="Arduino"></div>
+				<p>Платформа состоит из аппаратной и программной частей; обе чрезвычайно гибки и просты в использовании. Для программирования 
+					используется упрощённая версия C++, известная так же как Wiring. Разработку можно вести как с использованием бесплатной среды 
+					Arduino IDE, так и с помощью произвольного C/C++ инструментария. Поддерживаются операционные системы Windows, MacOS X и Linux.</p>
+				<h2>Платы arduino</h2>
+				<details>
+					<summary>Arduino Uno</summary>
+					<br>
+					<div class="center"><img class="board" src="engine/img/boards/uno.jpg" alt="Arduino Uno"></div>
+					<p>Arduino Uno - это устройство на основе микроконтроллера ATmega328. В его состав входит все необходимое для удобной работы 
+						с микроконтроллером: 14 цифровых входов/выходов (из них 6 могут использоваться в качестве ШИМ-выходов), 6 аналоговых 
+						входов, кварцевый резонатор на 16 МГц, разъем USB, разъем питания, разъем для внутрисхемного программирования (ICSP) и 
+						кнопка сброса. Для начала работы с уcтройством достаточно просто подать питание от AC/DC-адаптера или батарейки, либо 
+						подключить его к компьютеру посредством USB-кабеля.</p>
+					<p>В отличие от всех предыдущих плат Ардуино, Uno в качестве преобразователя интерфейсов USB-UART использует микроконтроллер 
+						ATmega16U2 (ATmega8U2 до версии R2) вместо микросхемы FTDI. </p>
+					<p>На плате Arduino Uno версии R2 для упрощения процесса обновления прошивки добавлен резистор, подтягивающий к земле линию 
+						HWB микроконтроллера 8U2.</p>
+				</details>
+				<details>
+					<summary>Arduino Nano</summary>
+					<br>
+					<div class="center"><img class="board" src="engine/img/boards/nano.jpg" alt="Arduino Nano"></div>
+					<p>Arduino Nano - это полнофункциональное миниатюрное устройство на базе микроконтроллера ATmega328 (Arduino Nano 3.0) или 
+						ATmega168 (Arduino Nano 2.x), адаптированное для использования с макетными платами. По функциональности устройство 
+						похоже на Arduino Duemilanove, и отличается от него размерами, отсутствием разъема питания, а также другим типом 
+						(Mini-B) USB-кабеля. Arduino Nano разработано и выпускается фирмой Gravitech.</p>
+				</details>
+				<details>
+					<summary>Arduino Mega</summary>
+					<br>
+					<div class="center"><img class="board" src="engine/img/boards/mega.jpg" alt="Arduino Mega"></div>
+					<p>Arduino Mega 2560 - это устройство на основе микроконтроллера ATmega2560. В его состав входит все необходимое для удобной 
+						работы с микроконтроллером: 54 цифровых входа/выхода (из которых 15 могут использоваться в качестве ШИМ-выходов), 16 
+						аналоговых входов, 4 UART (аппаратных приемопередатчика для реализации последовательных интерфейсов), кварцевый 
+						резонатор на 16 МГц, разъем USB, разъем питания, разъем ICSP для внутрисхемного программирования и кнопка сброса. Для 
+						начала работы с устройством достаточно просто подать питание от AC/DC-адаптера или батарейки, либо подключить его к 
+						компьютеру посредством USB-кабеля. Arduino Mega совместим с большинством плат расширения, разработанных для Arduino 
+						Duemilanove и Diecimila.</p>
+				</details>
+				<details>
+					<summary>Arduino Leonardo</summary>
+					<br>
+					<div class="center"><img class="board" src="engine/img/boards/leonardo.jpg" alt="Arduino Leonardo"></div>
+					<p>Arduino Leonardo - это устройство на базе микроконтроллера ATmega32U4. В его состав входит все необходимое для работы с 
+						данным микроконтроллером: 20 цифровых входов/выходов (7 из которых могут работать в качестве ШИМ-выходов, 12 - в 
+						качестве аналоговых входов), кварцевый резонатор на 16 МГц, разъем микро-USB, разъем питания, разъем для внутрисхемного 
+						программирования ICSP (In-Circuit Serial Programming) и кнопка сброса. Для начала работы с Leonardo достаточно просто 
+						подать питание от AC/DC-адаптера или батареи, либо подключить его к компьютеру посредством USB-кабеля.</p>
+					<p>Отличие Leonardo от всех предыдущих плат заключается в том, что его USB-контроллер встроен непосредственно в 
+						микроконтроллер ATmega32U4, что исключает необходимость в дополнительном процессоре. Благодаря этому при подсоединении 
+						к компьютеру Leonardo может определяться не только как виртуальный (CDC) COM-порт, но и как обычная мышь или клавиатура. 
+						Кроме того, такая архитектура оказывает влияние и на поведение платы.</p>
+				</details>
+				<details>
+					<summary>Arduino Pro Mini</summary>
+					<br>
+					<div class="center"><img class="board" src="engine/img/boards/pro-mini.jpg" alt="Arduino Pro Mini"></div>
+					<p>Arduino Pro Mini - это устройство на базе микроконтроллера ATmega328. В его состав входит: 14 цифровых входов/выходов 
+						(из них 6 могут использоваться в качестве ШИМ-выходов), 8 аналоговых входов, кварцевый резонатор, кнопка сброса и 
+						контактные площадки для впаивания разъемов. Шестиконтактный разъем может служить для питания и взаимодействия с платой 
+						через USB посредством FTDI-переходника либо макетной платы Sparkfun.</p>
+					<p>Arduino Pro Mini предназначен для полустационарного монтажа в различное оборудование или установки. Плата специально 
+						поставляется без впаянных разъемов, что позволяет пользователю впаивать провода или использовать необходимые типы 
+						разъемов по своему усмотрению. По расположению выводов Arduino Mini Pro совместим Arduino Mini.</p>
+				</details>
+				<details>
+					<summary>Arduino YUN</summary>
+					<br>
+					<div class="center"><img class="board" src="engine/img/boards/yun.jpg" alt="Arduino YUN"></div>
+					<p>Arduino YÚN - это первый представитель новейшей серии плат Ардуино со встроенным WiFi, сочетающих в себе широчайшие 
+						возможности Linux и простоту использования Ардуино. Arduino YÚN представляет собой комбинацию классического Arduino 
+						Leonardo (на базе микроконтроллера ATmega32U4) и WiFi-системы на кристалле, работающей под управлением Linino 
+						(дистрибутив ОС GNU/Linux на основе OpenWRT для микропроцессоров MIPS). Технически мы поместили Linux-машину на 
+						печатную плату Arduino Leonardo, связав их таким образом, чтобы у программиста Ардиуно была возможность удобно и 
+						просто запускать команды на стороне Linux, используя его в качестве интерфейса Ethernet или WiFi. Следует отметить, 
+						что из-за ограниченного объема памяти взаимодействие Ардуино с различными веб-сервисами всегда было довольно сложной 
+						задачей. Это объясняется тем, что многие веб-технологии зачастую основаны на объемных текстовых форматах (подобных XML), 
+						для анализа которых требуется достаточно много памяти.</p>
+				</details>
+				<details>
+					<summary>Arduino Micro</summary>
+					<br>
+					<div class="center"><img class="board" src="engine/img/boards/micro.jpg" alt="Arduino Micro"></div>
+					<p>Arduino Micro - это устройство на основе микроконтроллера ATmega32u4, разработанное совместно с Adafruit. В его состав 
+						входит все необходимое для удобной работы с микроконтроллером: 20 цифровых входов/выходов (из них 7 могут использоваться в качестве 
+						ШИМ-выходов, 12 - в качестве аналоговых входов), кварцевый резонатор на 16 МГц, разъем micro-USB, разъем ICSP для внутрисхемного 
+						программирования и кнопка сброса. Для начала работы с устройством достаточно просто подключить его к компьютеру посредством USB-кабеля. 
+						Устройство разработано таким образом, чтобы его можно было удобно размещать на макетной плате.</p>
+					<p>Как и в Leonardo, в Arduino Micro используется микропроцессор ATmega32u4 со встроенным контроллером USB. Такое решение исключает 
+						необходимость использования дополнительного контроллера, и при подключении к компьютеру позволяет Ардуино Micro определяться в системе 
+						как обычная мышь, клавиатура или виртуальный COM-порт.</p>
+				</details>
+			</div>
+			
+			<div id="arduinolessons" class="page">
+				<div class="center">
+					<h2>Видеороки от канала &laquo;Заметки Ардуинщика&raquo;</h2>
+					<iframe src="https://www.youtube.com/embed/videoseries?list=PLgAbBhxTglwmVxDDC5TSYUI91oZ0LZQMw" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="center">
+					<h2>Видеороки от канала &laquo;AmperkaRu&raquo;</h2>
+					<iframe src="https://www.youtube.com/embed/videoseries?list=PLfDmj22jP9S759DT250VVzfZs_4VnJqLa" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="center">
+					<h2>Видеороки от канала &laquo;Радиолюбитель TV&raquo;</h2>
+					<iframe src="https://www.youtube.com/embed/videoseries?list=PLleXqmo8pio1THWNZlx-py52KgafepaHf" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<div id="electronics" class="page">
+				<div class="center">
+					<h2>Видеороки от канала &laquo;Радиолюбитель&raquo;</h2>
+					<iframe src="https://www.youtube.com/embed/videoseries?list=PL_2PkT1Qd7H-yLV_8OMhKbwsoclr13Umk" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="center">
+						<h2>Видеороки от канала &laquo;Паяльник TV&raquo;</h2>
+						<iframe src="https://www.youtube.com/embed/videoseries?list=PLBLtydguylgB-9FPU63TY_vtsj0xYt5li" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+			</div>
+
+			<div id="modules" class="page">
+				<h1 class="center">Датчики</h1>
+				<table>
+					<tr>
+						<td class="text">
+							<p>Сенсоры являются глазами, ушами и другими органами чувств микроконтроллера или другого управляющего устройства. 
+									Их различают по роду сигнала и по назначению.</p>
+							<h3>По роду сигнала разделяют на:</h3>
+							<ul>
+								<li>Аналоговые</li>
+								<li>Цифровые</li>
+							</ul>
+							<h3>А по назначению датчики бывают для измерения:</h3>
+							<ul>
+								<li>Температуры</li>
+								<li>Давления</li>
+								<li>Влажности</li>
+								<li>Освещённости</li>
+								<li>Расстояния</li>
+								<li>Уровня жидкости</li>
+								<li>И так далее</li>
+							</ul>
+						</td>
+						<td class="center"><img class="modules" src="engine/img/pages/modules/001.jpg" alt="Датчики"></td>
+					</tr>
+				</table>
+				<details>
+					<summary>Датчик света или освещенности</summary>
+					<table class="center">
+						<tr>
+							<td>
+								<img class="modules" style="width: 50%" src="engine/img/modules/photodiode.jpg" alt="Фотодиод">
+							</td>
+							<td>
+								<img class="modules" style="width: 50%" src="engine/img/modules/light-sensor.jpg" alt="Датчик света или освещенности">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Фотодиод</h3>
+							</td>
+							<td>
+								<h3>Датчик света или освещенности</h3>
+							</td>
+						</tr>
+					</table>
+					<p>Простейшим способом определить освещённость чего-либо – использовать фоторезистор, фотодиод или фототранзистор. 
+						Можно подключить к Ардуино один из перечисленных вариантов или купить специальную плату - датчик освещенности.</p>
+					<p>В чем преимущества готового решения? Во-первых, для определения изменений освещенности одного фотоэлемента недостаточно, 
+						нужен ещё и обычный или подстроечный резистор, возможно её и компаратор, для ступенчатого срабатывания типа "да/нет". 
+						Во-вторых, печатная плата, изготовленная в заводских условиях будет надежнее навесного монтажа или пакетной плат, 
+						или других способов, которыми пользуются любители.</p>
+				</details>
+				<details>
+					<summary>Датчик препятствия</summary>
+					<table>
+						<tr>
+							<td class="center"><img class="modules" src="engine/img/modules/barrier-sensor.jpg" alt="Датчик препятствия"></td>
+							<td class="text">
+								<p>Основным функциональным элементом является фотодиод и светодиод излучающие и принимающие в ИК спектре (поэтому не виден 
+									человеческому глазу, а также пороговый узел, собранный, например, на компараторе с регулятором чувствительности. С его 
+									помощью регулируется расстояние, на котором срабатывает датчик, кстати он цифровой.</p>
+							</td>
+						</tr>
+					</table>
+					<div class="center">
+						<img class="boards" src="engine/img/modules/barrier-example.png" alt="Датчик препятствия">
+						<h4>Пример схемы подключения</h4>
+					</div>
+				</details>
+				<details>
+						<summary>Датчик расстояния</summary>
+						<table>
+							<tr>
+								<td class="text">
+									<p>Предыдущий экземпляр состоял из приемника, - фотодиода, и излучателя, - светодиода. Ультразвуковой датчик расстояния 
+										также состоит из приемника и излучателя УЗ волн. Его название – HC SR04.</p>
+									<h3>Характеристики HC SR04:</h3>
+									<ul>
+										<li>Питающее напряжение 5В</li>
+										<li>Рабочий параметр силы т ока – 15 мА</li>
+										<li>Сила тока в пассивном состоянии &lt; 2 мА</li>
+										<li>Обзорный угол — 15°</li>
+										<li>Сенсорное разрешение – 0,3 см</li>
+										<li>Измерительный угол — 30°</li>
+										<li>Ширина импульса – 10-6 с</li>
+										<li>Дальность измерения: 2-400 см.</li>
+									</ul>
+								</td>
+								<td class="center"><img class="modules" src="engine/img/modules/us-sensor.jpg" alt="Датчик расстояния"></td>
+							</tr>
+						</table>
+				</details>
+				<details>
+					<summary>Датчик движения</summary>
+					<table>
+						<tr>
+							<td class="center"><img class="modules" src="engine/img/modules/motion-sensor.jpg" alt="Датчик движения"></td>
+							<td class="text">
+								<p>Самым распространенным датчиком движения для Ардуино является модуль HC SR501 на базе ИК—сенсора. 
+									Особенностью этого модуля является то, что у него есть регулировка расстояния срабатывания и времени 
+									задержки выходного сигнала после срабатывания.</p>
+							</td>
+						</tr>
+					</table>
+					<h3>Характеристики модуля:</h3>
+					<ul>
+						<li>Напряжение питания 4,5 – 20 В</li>
+						<li>Ток покоя ≈ 50 мкА</li>
+						<li>Напряжение выходного сигнала (логический уровень): 3.3 В</li>
+						<li>Диапазон рабочих температура – от -15° C до 70° C</li>
+						<li>Размеры: 32*24 мм</li>
+						<li>Поле зрения – 110°</li>
+						<li>Максимальная дистанция срабатывания – от 3 до 7 м (регулируется); При температуре более 30° C это расстояние 
+							может уменьшаться</li>
+					</ul>
+				</details>
+				<hr />
+				<h1 class="center">Модули</h1>
+				<div class="right"></div>
+				<table>
+					<tr>
+						<td class="text">
+							<p>Для начала стоит понять, зачем вообще подобная модульность необходима. Ведь, казалось бы, Ардуино – это всего лишь 
+								микроконтроллер, к которому можно приспособить любой сторонний датчик. Но на деле всё не так просто, как раз из-за 
+								программной части и других особенностей системы, поэтому, для расширения функционала, и присутствуют специальные Аrduino 
+								модули, позволяющие приспособить МК к любым потребностям человека, который его использует. Это основная функция, объясняющая 
+								необходимость модульности, помимо неё, присутствуют и другие причины такого решения:</p>
+							<ul>
+								<li>
+									<b>Стандартизированный набор датчиков</b> с одинаковыми характеристиками позволяет писать универсальные решения для 
+									различных ситуаций. Таким образом, захотев воплотить в жизнь какой-то проект, вам не нужно самостоятельно изучать язык 
+									программирования и создавать уникальную электросхему. В большинстве случаев, уже готовая система или какие-то её части 
+									присутствуют в свободном доступе, инженеру лишь остается их правильно скомпоновать, что значительно экономит время при 
+									реализации задумок.
+								</li>
+								<li>
+									<b>Простота работы с Ардуино.</b> Уже описанная выше стандартизация, позволяет быть уверенным, что купленный вами датчик 
+									или специальный модуль, не нужно будет подключать с помощью дополнительных шлейфов или переходников. Хоть иногда и 
+									появляется необходимость самостоятельно паять платформу под Ардуино, но, в большинстве случаев, вы можете приобрести уже 
+									готовую, под конкретные модули и потребности. Более того, существуют универсальные платы, полностью раскрывающие 
+									возможности модульной системы.
+								</li>
+							</ul>
+						</td>
+						<td class="center">
+							<img class="modules" src="engine/img/pages/modules/000.jpg" alt="Модули">
+						</td>
+					</tr>
+				</table>
+				<details>
+					<summary>Модуль часов реального времени</summary>
+					<table>
+						<tr>
+							<td class="center"><img class="modules" src="engine/img/modules/rtc.jpg" alt="Модуль часов реального времени"></td>
+							<td class="text">
+								<p>Во многих проектах Ардуино требуется отслеживать и фиксировать время наступления тех или иных событий. Модуль часов 
+										реального времени, оснащенный дополнительной батарей, позволяет хранить текущую дату, не завися от наличия питания 
+										на самом устройстве.</p>
+									<p>Модуль часов представляет собой небольшую плату, содержащей, как правило, одну из микросхем DS1307, DS1302, DS3231. 
+										Кроме этого, на плате практически можно найти механизм установки батарейки питания. Такие платы часто  применяется для 
+										учета времени, даты, дня недели и других хронометрических параметров. Модули работают от автономного питания – батареек, 
+										аккумуляторов, и продолжают проводить отсчет, даже если на Ардуино отключилось питание.</p>
+									<p>Часы ведут отсчет в единицах, которые удобны обычному человеку – минуты, часы, дни недели и другие, в отличие от обычных 
+										счетчиков и тактовых генераторов, которые считывают «тики». В Ардуино имеется специальная функция millis(), которая 
+										также может считывать различные временные интервалы. Но основным недостатком этой функции является сбрасывание в ноль 
+										при включении таймера. С ее помощью можно считать только время, установить дату или день недели невозможно. Для решения 
+										этой проблемы и используются модули часов реального времени.</p>
+							</td>
+						</tr>
+					</table>
+				</details>
+				<details>
+					<summary>Bluetooth модуль HC-06</summary>
+					<table>
+						<tr>
+							<td class="text">
+								<p>Помогает организовать беспроводную связь Ардуино с компьютером, телефоном или другими устройствами.</p>
+							</td>
+							<td class="center"><img class="modules" src="engine/img/modules/hc-06.jpg" alt="Bluetooth модуль HC-06"></td>
+						</tr>
+					</table>
+				</details>
+				<details>
+					<summary>GPS модуль</summary>
+					<table>
+						<tr>
+							<td class="center"><img class="modules" src="engine/img/modules/gps.jpg" alt="GPS модуль"></td>
+							<td class="text">
+								<p>Для работы с Ардуино существует большое количество различных GPS-модулей. С их помощью можно определять 
+									точное местоположение (географические координаты, высота над уровнем моря), скорость перемещения, дату, 
+									время.</p>
+								<p><b>Модуль Neo-6M GPS.</b> Приемник производится компанией u-blox. В этом модуле используются новейшие 
+									технологии для получения точной информации о местоположении. Напряжение питания модуля 3-5В. Линейка 
+									устройств представлена типами G, Q, M, P, V и T со своими уникальными характеристиками.  Время холодного 
+									старта около 27 секунд.</p>
+								<p>Модуль использует стандартный протокол NMEA 0183 для связи с GPS приемниками. Приемник представляет собой 
+									плату, на которой располагаются модуль NEO-6M-0-001, стабилизатор напряжения, энергонезависимая память, 
+									светодиод и аккумулятор.</p>
+							</td>
+						</tr>
+					</table>
+				</details>
+			</div>
+
+			<div id="projects" class="page">
+				<div class="center">
+					<h2>Проекты от &laquo;AlexGyver&raquo;</h2>
+					<iframe src="https://www.youtube.com/embed/videoseries?list=PLOT_HeyBraBunh8PX-WOy_GMsUir98wNM" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<h2>Проекты от &laquo;voltNik&raquo;</h2>
+					<iframe src="https://www.youtube.com/embed/videoseries?list=PL_4RQBmyNYt-oPOsdol7ujgJ8-pZstxkZ" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<h2>Проекты от &laquo;AmperkaRu&raquo;</h2>
+					<iframe src="https://www.youtube.com/embed/videoseries?list=PLfDmj22jP9S78T8mZuzNmVtnnY4wzDIG-" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div id="other" class="page">
+				<h1 class="center">STM32F407 Discovery</h1>
+				<table>
+					<tr>
+						<td class="text">
+							<p>Платформа STM32F407 Discovery — многофункциональный отладочный комплект для погружения в мир микроконтроллеров. 
+								Плата включает два набора компонентов: программатор/отладчик ST-LINK V2-A и рабочую область со всей необходимой 
+								периферией.</p>
+							<p>В отличие от Arduino на плате нет загрузчика. Платформа программируется через встроенный программатор. Это 
+								упрощает разработку серийных устройств — после отладки устройства на макетке, серийные чипы прошиваются 
+								встроенным программатором.</p>
+						</td>
+						<td class="center"><img class="modules" src="engine/img/pages/other/stm32-discovery.jpg" alt="STM32F407 Discovery"></td>
+					</tr>
+				</table>
+				<h1 class="center">Iskra JS</h1>
+				<table>
+					<tr>
+						<td class="center"><img class="modules" src="engine/img/pages/other/iskra-js.jpg" alt="Iskra JS"></td>
+						<td class="text">
+							<p>Iskra JS — флагманская плата Амперки с встроенным интерпретатором JavaScript. Она является развитием платформы 
+								Espruino, но совместима с платами шилдами для Arduino. Если для вашего проекта важны скорость и комфорт 
+								разработки, максимальная совместимость с платами расширения, сенсорами и другими электронными модулями, Iskra JS 
+								— это оптимальный выбор.</p>
+						</td>
+					</tr>
+				</table>
+				<h1 class="center">Teensy</h1>
+				<table>
+					<tr>
+						<td class="text">
+							<p>Teensy — это семейство компактных платформ, поддерживающих Arduino IDE. Старшие представители этого семейства 
+								(версий 3.x) построены на высокопроизводительных ARM-процессорах с ядром Cortex-M4. Они обладают высокой 
+								производительностью, большим количеством памяти и широким набором интерфейсов.</p>
+						</td>
+						<td class="center"><img class="modules" src="engine/img/pages/other/teensy.jpg" alt="Teensy"></td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="sources" class="page">
+				<h2>Информация</h2>
+				<ul>
+					<li><a target="_blank" href="http://doc.arduino.ua">doc.arduino.ua</a></li>
+					<li><a target="_blank" href="http://electrik.info">electrik.info</a></li>
+					<li><a target="_blank" href="https://arduinoplus.ru">arduinoplus.ru</a></li>
+					<li><a target="_blank" href="https://arduinomaster.ru">arduinomaster.ru</a></li>
+				</ul>
+				<h2>Видео</h2>
+				<ul>
+					<li><a target="_blank" href="https://www.youtube.com/channel/UCgtAOyEQdAyjvm9ATCi_Aig">AlexGyver</a></li>
+					<li><a target="_blank" href="https://www.youtube.com/channel/UCRKRGoo367_uweBlZ8PF4Nw">AmperkaRu</a></li>
+					<li><a target="_blank" href="https://www.youtube.com/channel/UC4s13gPVOMQVX3P1ZpdUwjA">voltNik</a></li>
+					<li><a target="_blank" href="https://www.youtube.com/channel/UC4axiS76D784-ofoTdo5zOA">Заметки Ардуинщика</a></li>
+					<li><a target="_blank" href="https://www.youtube.com/channel/UCh9cB06Agv1Z8QTIkiGqotA">Паяльник TV</a></li>
+					<li><a target="_blank" href="https://www.youtube.com/channel/UCt8OnrmeXDCSgk7WGdbIxbg">Радиолюбитель TV</a></li>
+					<li><a target="_blank" href="https://www.youtube.com/channel/UC3KvOdEZ3qHwtL2jM30qY0g">Радиолюбитель</a></li>
+				</ul>
+			</div>
+			<div id="404" class="page">
+				<h1>404 страница не найдена</h1>
+			</div>
+
+			<div class="clear_float"></div>
+
+		</div>
+
+		<div id="sidebar">
+			<h2 class="header">Полезные ссылки:</h2>
+			<ul>
+				<li>
+					<a target="_blank" href="https://arduino.cc">Официальный сайт Arduino</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://amperka.ru">Amperka</a> - русская версия arduino
+				</li>
+				<li>
+					<a target="_blank" href="http://wiki.amperka.ru/">Amperka wiki</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://arduino.ru">Русскоязычный сайт arduino</a>
+				</li>
+				<li>
+					<a href="?sources">Информационные источники</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clear_float"></div>
+	</div>
+
+	<div class="clear_float"></div>
+
+	<footer>
+		<br>
+		<h3>Тамбов <span id="year"></span></h3>
+	</footer>
+
+	<a href="#"><div id="top-btn"><span id="top-btn-text">&#9650;</span></div></a>
+
+	<script type="text/javascript">loadEvent()</script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+nav.hMenu {
+	width: var(--width);
+	margin-left: auto;
+	margin-right: auto;
+}
+ul.hMenu {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	margin-bottom: 10px;
+	background: var(--HmenuColor);
+	height: 50px;
+}
+a.hMenu {
+	text-decoration: none;
+	background:var(--HmenuColor);
+	color: var(--HmenuTextColor);
+	padding:0px 15px;
+	font-family: arial;
+	line-height:50px;
+	display: block;
+	border-right: 1px solid var(--HmenuBorderColor);
+	-moz-transition: all 0.3s 0.01s ease;
+	-o-transition: all 0.3s 0.01s ease;
+	-webkit-transition: all 0.3s 0.01s ease;
+}
+a.hMenu:hover {
+	background: var(--HmenuColorHover);
+}
+li.hMenu {
+	float: left;
+	text-align: center;
+	min-width: 20%;
+	display: inline;
+	position:relative;
+}
+li.hMenu > ul.hMenu {
+	position:absolute;
+	top:50px;
+	display:none;   
+}
+
+li.hMenu:hover > ul.hMenu {
+	display:block; 
+	width:250px;
+}
+li.hMenu:hover > ul.hMenu > li.hMenu {
+	float:none;
+}

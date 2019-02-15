@@ -1,0 +1,11 @@
+img.board {
+	width: 50%;
+	height: auto;
+}
+img.modules {
+    width: 70%;
+    height: auto;
+}
+td > img.modules {
+    width: 90%;
+}

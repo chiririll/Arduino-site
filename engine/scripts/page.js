@@ -36,7 +36,6 @@ function loadPage () {
     document.getElementById("page").textContent = pageName[page];
     
     for (var p in pageName) {
-        console.info(p);
         if (p != page && document.getElementById(p)) {
             document.getElementById(p).innerHTML = "";
         }

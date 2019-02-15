@@ -4,7 +4,6 @@
 @import url("summary.css"); 
 @import url("text.css"); 
 @import url("top-menu.css"); 
-@import url("videoplayer.css");
 
 :root {
 	--width: 100%;
